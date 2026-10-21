@@ -107,6 +107,11 @@ commercial offer), the charter or a meeting decision, or human judgement. Build 
 from data and never written by AI; AI only writes wording and warnings with a link to the
 source.
 
+Ask once, for every check that surfaces here (limit, quorum, competence, missing source,
+unconfirmed amount), whether it **blocks printing** or is **advisory**. A blocking check must be
+computed from data; an AI-written warning is always advisory. Record the tier in the Warnings
+row of §16 and use the same word everywhere in §7 and §9.
+
 ### 3. Glossary capture (deferred)
 
 Collect new domain words into `pending_glossary_terms`. Typical OSBB homonyms are listed in
@@ -158,13 +163,16 @@ to §10. Use `sdd:devils-advocate` when installed.
 Reach in a single association is tiny and makes every RICE look bad, so count **documents or
 decisions per year across the associations you serve**, not people. Impact must reflect the
 cost of a mistake from phase 2 (a legal-risk feature gets Impact >= 2). Confidence drops to 0.5
-when §16 has rows with source "unknown". Effort from §7. User confirms or adjusts each number.
+when §16 has rows with source "unknown" or when Reach counts associations that are not yet
+confirmed users (then list Reach in §15 too). Effort from §7. User confirms or adjusts each
+number.
 
 ### 10. Feasibility (repo scan + AskUserQuestion)
 
 Scan the repo read-only for adjacent modules and patterns: bounded-context folders, document
 rendering, file upload, existing sentinel errors (`references/osbb-domain.md` §Repo reference).
-Cite what you found; "we know how" without a path is a guess.
+Cite what you found; "we know how" without a path is a guess. Time is ☑ only with a named
+person and a window (for example "author, evenings, Nov-Dec"); a bare "confirmed" stays ☐.
 
 ### 11. Recommendation (AskUserQuestion)
 
@@ -184,6 +192,7 @@ Create the folder, copy the template, apply pending glossary terms (`sdlc:fix-te
 - No tech terms in the body: `\b(Postgres|PostgreSQL|Redis|Kafka|MySQL|pgx|sqlc|gorm|chi|React|Vite|JSONB|REST|endpoint)\b`
   and `p99`, outside §17 (§17 is the only place for repo identifiers).
 - Every row of §16 has a source and an owner; no AI-written row contains a number.
+- Each check has one tier: a check called non-blocking in §7 is not "blocks printing" in §9.
 - Length <= 6 pages (~2600 words).
 - §13 cites §6, §8, §11, §12, §16.
 
