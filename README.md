@@ -36,6 +36,10 @@ Not yet implemented.
 `bash scripts/validate.sh` runs every check (JSON syntax, `claude plugin validate --strict`, manifest
 version sync, shell lint, tests). CI runs the same script.
 
+Project-local skill (not shipped with the plugin): `/ao-sdlc-audit <slug>` in
+[.claude/skills/ao-sdlc-audit/](.claude/skills/ao-sdlc-audit/SKILL.md) audits a feature folder for the
+nine SDLC artifacts (sdlc or sdd layout) and reports which are present, missing or stale.
+
 ## License
 
 MIT, see [LICENSE](LICENSE).
