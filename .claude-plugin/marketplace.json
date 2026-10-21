@@ -11,7 +11,7 @@
     {
       "name": "petforge",
       "source": "./",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "description": "Vertical-slice workflow for Go + React pet projects: plan, scaffold, test and ship a new entity end to end, with a bounded-context import guard.",
       "category": "development",
       "tags": ["scaffold", "vertical-slice", "go", "react", "openapi", "bounded-context"]
