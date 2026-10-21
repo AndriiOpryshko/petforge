@@ -1,0 +1,20 @@
+{
+  "name": "petforge",
+  "owner": {
+    "name": "Andrii Opryshko",
+    "url": "https://github.com/AndriiOpryshko"
+  },
+  "metadata": {
+    "description": "Single-plugin marketplace for petforge."
+  },
+  "plugins": [
+    {
+      "name": "petforge",
+      "source": "./",
+      "version": "0.1.0",
+      "description": "Vertical-slice workflow for Go + React pet projects: plan, scaffold, test and ship a new entity end to end, with a bounded-context import guard.",
+      "category": "development",
+      "tags": ["scaffold", "vertical-slice", "go", "react", "openapi", "bounded-context"]
+    }
+  ]
+}
