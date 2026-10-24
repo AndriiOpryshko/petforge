@@ -72,6 +72,12 @@ generator's check fails.
 A block exits 2 with the reason, which Claude reads and corrects. On `feature-<n>/*` branches each
 block is also appended to the project's log file as `- <time> | F<n> | hook | blocked <file>: <reason>`.
 
+## SDK scripts
+
+[sdk/api-autodoc/](sdk/api-autodoc/README.md) is a Claude Agent SDK loop in Python that updates
+`docs/api/<context>.md` from contract changes. Python handles the pre-check, the schema and spec
+verification and the run artifacts around the agent: `make -C sdk/api-autodoc run TARGET=<project>`.
+
 ## Development
 
 `bash scripts/validate.sh` runs every check (JSON syntax, `claude plugin validate --strict`, manifest
