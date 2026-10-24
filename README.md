@@ -92,6 +92,11 @@ discovery interview tuned for housing-association (OSBB) features and writes `id
 next step: the course `sdlc:write-prd` flow with a 10-section PRD (error catalogue, migration plan, RBAC and
 state machine), traceability and legal-competence acceptance criteria fed by the ao-discovery brief, and
 Go + Postgres NFR defaults. Writes `PRD.ao-prd.md` next to a PRD from another skill.
+`/ao-architecture <slug>` in [.claude/skills/ao-architecture/](.claude/skills/ao-architecture/SKILL.md) follows
+with the course `sdlc:architecture-design` flow: Arc42 SAD with C4 L1/L2, a four-criteria ADR gate (adds
+«touches the database»), ADRs in the repo's `docs/adr` shape with Blast radius, Migration and Links blocks,
+recommended containers and a bounded-context ownership table in §5. Writes `sad.ao-architecture.md` next to a
+SAD from another skill.
 
 ## License
 
