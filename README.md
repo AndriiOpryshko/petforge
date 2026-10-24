@@ -82,6 +82,10 @@ Project-local skill (not shipped with the plugin): `/ao-sdlc-audit <slug>` in
 nine SDLC artifacts (sdlc or sdd layout) and reports which are present, missing or stale.
 `/ao-discovery <slug>` in [.claude/skills/ao-discovery/](.claude/skills/ao-discovery/SKILL.md) runs a
 discovery interview tuned for housing-association (OSBB) features and writes `idea-brief.md`.
+`/ao-prd <slug> [--reference <context>]` in [.claude/skills/ao-prd/](.claude/skills/ao-prd/SKILL.md) is the
+next step: the course `sdlc:write-prd` flow with a 10-section PRD (error catalogue, migration plan, RBAC and
+state machine), traceability and legal-competence acceptance criteria fed by the ao-discovery brief, and
+Go + Postgres NFR defaults. Writes `PRD.ao-prd.md` next to a PRD from another skill.
 
 ## License
 
