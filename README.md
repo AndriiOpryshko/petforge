@@ -105,6 +105,12 @@ goose migrations (Up/Down in one file, `StatementBegin/End`, `NO TRANSACTION` fo
 `updated_at` trigger, `text` + length CHECK, stable-invariant CHECKs only, no cross-context FKs) and ships
 Postgres 18 expand/backfill/contract templates and a `pg_dump` schema roundtrip. Writes
 `data-model.ao-data-model.md` next to a data model from another skill.
+`/ao-api-forge <slug> [--reconcile]` in [.claude/skills/ao-api-forge/](.claude/skills/ao-api-forge/SKILL.md) is the
+contract step: the course `sdlc:api-forge` flow (scenario A/B, drift check with a verdict, `--reconcile`) producing an
+OpenAPI 3.1 delta for the repo's single contract - one tag per bounded context, RFC 9457 problem types from the ao-prd
+error catalogue, keyset cursor lists, a session-cookie security scheme, field constraints from goose CHECKs, River jobs
+as the async contract - proven by a scratch oapi-codegen + orval run. Writes `contracts.ao-api-forge/` next to
+contracts from another skill.
 
 ## License
 
