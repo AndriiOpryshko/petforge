@@ -97,6 +97,14 @@ with the course `sdlc:architecture-design` flow: Arc42 SAD with C4 L1/L2, a four
 «touches the database»), ADRs in the repo's `docs/adr` shape with Blast radius, Migration and Links blocks,
 recommended containers and a bounded-context ownership table in §5. Writes `sad.ao-architecture.md` next to a
 SAD from another skill.
+`/ao-data-model <slug>` in [.claude/skills/ao-data-model/](.claude/skills/ao-data-model/SKILL.md) is the
+course `sdlc:generate-data-model` flow rewritten for the repo's goose + sqlc practice: `data-model.md` with
+context ownership, a query -> index map, an error-catalogue -> constraint map and ADR-backed deviations, plus
+goose migrations (Up/Down in one file, `StatementBegin/End`, `NO TRANSACTION` for `CONCURRENTLY`) staged as
+`NNNNN_*.sql` with a manifest until promote. It bootstraps a rules baseline (`uuid` + `gen_random_uuid()`,
+`updated_at` trigger, `text` + length CHECK, stable-invariant CHECKs only, no cross-context FKs) and ships
+Postgres 18 expand/backfill/contract templates and a `pg_dump` schema roundtrip. Writes
+`data-model.ao-data-model.md` next to a data model from another skill.
 
 ## License
 
