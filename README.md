@@ -111,6 +111,15 @@ OpenAPI 3.1 delta for the repo's single contract - one tag per bounded context, 
 error catalogue, keyset cursor lists, a session-cookie security scheme, field constraints from goose CHECKs, River jobs
 as the async contract - proven by a scratch oapi-codegen + orval run. Writes `contracts.ao-api-forge/` next to
 contracts from another skill.
+`/ao-break-tasks <slug>` in [.claude/skills/ao-break-tasks/](.claude/skills/ao-break-tasks/SKILL.md) closes the
+design chain: the course `sdlc:break-tasks` flow (gate, slice, DAG, per-task DoD, tracker, `tasks.json`) cut along
+the monolith's vertical layers - new-context wiring, goose migration via `promote-migration` and `/roundtrip`, sqlc,
+stdlib-only domain with the §5.1 sentinels, use case, strict-server handler with problem+json, River job, route +
+feature component + a story per state, Playwright e2e - with one task per §10 transition and DoD lines that name
+the command, the AC and the error code. It reads CONTEXT.md invariants, sentinels and the org filter (and stops
+without them), keeps `tasks.json` consumable by `/sdlc:implement-tasks`, and ships `scripts/check-tasks.mjs`
+(deps, cycles, Stage-1 AC and error-code coverage, `association_id` on every query, layer order, generated
+files), tested in `tests/ao-break-tasks.test.sh`. Writes `tasks.ao-break-tasks/` next to tasks from another skill.
 
 ## License
 
