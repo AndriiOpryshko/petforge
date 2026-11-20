@@ -1,0 +1,21 @@
+{
+  "name": "webhook-channel",
+  "version": "0.1.0",
+  "description": "Module 8 final homework: a Claude Code channel that pushes authenticated, schema-filtered webhooks into a live session",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && vitest run",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.2",
+    "typescript": "^6.0.3",
+    "vitest": "^3.2.6"
+  }
+}

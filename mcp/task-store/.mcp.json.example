@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "task-store": {
+      "command": "node",
+      "args": ["dist/server.js"]
+    },
+    "task-store-http": {
+      "type": "http",
+      "url": "http://localhost:3335/mcp"
+    }
+  }
+}
