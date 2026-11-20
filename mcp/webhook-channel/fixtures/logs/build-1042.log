@@ -1,0 +1,21 @@
+[2026-11-20T17:42:01Z] build-1042 started: branch=main commit=3f9c2ab trigger=push actor=ci-bot
+[2026-11-20T17:42:03Z] step 1/4 checkout ................................ ok (1.8s)
+[2026-11-20T17:42:19Z] step 2/4 mise run gen ............................ ok (15.6s)
+[2026-11-20T17:42:48Z] step 3/4 mise run lint ........................... ok (28.9s)
+[2026-11-20T17:42:48Z] step 4/4 mise run test
+ok      example.test/core/internal/system/app               0.412s
+ok      example.test/core/internal/identity/app             1.207s
+--- FAIL: TestCloseMeeting_CountsQuorum (0.03s)
+    close_meeting_test.go:88: quorum: got 4 of 9 present counted as reached, want not reached
+    close_meeting_test.go:91: meeting status: got "closed", want "open"
+--- FAIL: TestCloseMeeting_RejectsWithoutQuorum (0.02s)
+    close_meeting_test.go:117: expected error governance.quorum_not_reached, got <nil>
+FAIL
+FAIL    example.test/core/internal/governance/app           0.874s
+ok      example.test/core/internal/governance/domain        0.095s
+ok      example.test/core/internal/finance/app              0.633s
+[2026-11-20T17:43:31Z] hint: last change in internal/governance/domain/quorum.go (commit 3f9c2ab):
+[2026-11-20T17:43:31Z]   -    return present*2 > total
+[2026-11-20T17:43:31Z]   +    return present*2 >= total-1
+[2026-11-20T17:43:31Z] step 4/4 mise run test ........................... FAILED (43.1s)
+[2026-11-20T17:43:31Z] build-1042 finished: status=failed duration=90s

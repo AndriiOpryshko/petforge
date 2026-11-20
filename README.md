@@ -78,6 +78,12 @@ block is also appended to the project's log file as `- <time> | F<n> | hook | bl
 `docs/api/<context>.md` from contract changes. Python handles the pre-check, the schema and spec
 verification and the run artifacts around the agent: `make -C sdk/api-autodoc run TARGET=<project>`.
 
+## MCP servers
+
+[mcp/](mcp/README.md) holds two MCP servers in TypeScript: `task-store` (tools with an output schema
+and an honest `isError` contract, checked with MCP Inspector) and `webhook-channel` (a Claude Code
+channel that pushes authenticated, schema-filtered webhooks into a live session).
+
 ## Development
 
 `bash scripts/validate.sh` runs every check (JSON syntax, `claude plugin validate --strict`, manifest

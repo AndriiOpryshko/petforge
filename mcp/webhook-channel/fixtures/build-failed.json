@@ -1,0 +1,9 @@
+{
+  "actor": "ci-bot",
+  "event": "build_failed",
+  "ref": "build-1042",
+  "summary": "main: mise run test failed in internal/governance/app",
+  "url": "https://ci.example.test/builds/1042",
+  "raw_log_tail": "this field is not in the schema and must never reach the session",
+  "repository": { "clone_token": "not-a-real-token" }
+}
